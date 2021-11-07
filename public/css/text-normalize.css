@@ -848,3 +848,20 @@
 .text-holder slot {
     display: contents;
 }
+
+#tinymce a,
+.text-holder a {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#tinymce a:active,
+.text-holder a:active {
+    color: #FF0000;
+}
+
+#tinymce a:hover,
+.text-holder a:hover {
+    color: #080885;
+}
