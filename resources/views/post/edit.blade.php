@@ -3,7 +3,7 @@
 @section('title', 'Upravit příspěvek')
 
 @section('content')
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/bys1ly30gpwdd8jb5i9lt4ro2avsfnxmn1em00cbt3baqbun/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <div class="" style="display: grid; place-content: center;width: 100%; min-height: 100vh">
 
         @if ($errors->any())
