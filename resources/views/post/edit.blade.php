@@ -113,7 +113,7 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-                content_css : "/css/app.css",
+                content_css : "/css/app.css,/css/text-normalize.css",
                 image_class_list: [
                     {title: 'img-responsive', value: 'img-responsive'},
                 ],
@@ -163,7 +163,7 @@
                     return
                 }
 
-                fetch(`http://127.0.0.1:8000/post/tag/${name}`)
+                fetch(`https://casopis.astehlik.eu/post/tag/${name}`)
                     .then(response => response.json())
                     .then(data => {
                         console.log(data)
