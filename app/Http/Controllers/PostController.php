@@ -66,7 +66,7 @@ class PostController extends Controller
 
             $path=$request->file('img')->storeAs('imgs', $fileName, 'public');
 
-            $url = Storage::url($path);
+            $url = '/uploads/'.$path;
 
             if (!Img::where('name', $fileName)->first()) {
                 Img::create([
@@ -183,9 +183,7 @@ class PostController extends Controller
             $fileName = $file . '.' . $type;
 
             $path=$request->file('img')->storeAs('imgs', $fileName, 'public');
-
-            $url = Storage::url($path);
-
+            $url = '/uploads/'.$path;
             if (!Img::where('name', $fileName)->first()) {
                 Img::create([
                     "name" => $fileName,
@@ -292,7 +290,7 @@ class PostController extends Controller
 
         $path=$request->file('file')->storeAs('imgs', $fileName, 'public');
 
-        $url = Storage::url($path);
+        $url = '/uploads/'.$path;
 
         if (!Img::where('name', $fileName)->first()) {
             Img::create([

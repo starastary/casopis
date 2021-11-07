@@ -113,7 +113,7 @@
         <script>
             tinymce.init({
                 selector: 'textarea',
-
+                content_css : "/css/app.css",
                 image_class_list: [
                     {title: 'img-responsive', value: 'img-responsive'},
                 ],
