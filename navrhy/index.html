@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/all.css">
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body class="relative bg-background-light">
+    <header class="w-full h-screen bg-primary-dark-500 bg-img relative">
+        <div class="w-full h-full bg-primary-dark-500 opacity-75">
+
+        </div>
+        <div class="absolute top-0 left-0 w-full h-screen z-20 flex flex-col lg:flex-row justify-evenly items-center">
+            <article class="w-10/12 md:w-7/12 lg:w-5/12 xl:w-1/3 2xl:w-1/4 text-center lg:text-left">
+                <h2 class="text-text-light font-bold text-6xl md:text-7xl lg:text-9xl">Název</h2>
+                <p class="text-text-light font-semibold  text-sm md:text-base lg:text-2xl mt-6">„Většina lidí ve skutečnosti nechce svobodu, protože svoboda zahrnuje odpovědnost a většina lidí se bojí odpovědnosti.“ Zdroj: https://citaty.net/</p>
+            </article>
+            <article class="w-5/12 xl:w-1/3 2xl:w-1/4 text-center ">
+                <h3 class="text-text-light font-semibold text-2xl md:text-4xl lg:text-5xl">Poslední díl:</h3>
+                <p class="text-text-light text-xl md:text-2xl lg:text-3xl mt-3">10/21</p>
+                <a href="#" class="block w-32 md:w-56 m-auto px-2 py-3 text-text-light font-semibold  text-lg md:text-2xl lg:text-3xl bg-secondary-dark-500 mt-6 shadow-xl hover:bg-secondary-dark-700 hover:shadow-2xl transition">Stahujte zde</a>
+            </article>
+        </div>
+        <a href="#navbar" class=" absolute z-20 bottom-2 md:bottom-5 items-center left-1/2 flex flex-col transform -translate-x-1/2 text-4xl lg:text-6xl text-text-light opacity-75 hover:opacity-100 transition">
+            <i class="fas fa-mouse"></i>
+            <i class="fas fa-sort-down -mt-3 lg:-mt-5"></i>
+        </a>
+    </header>
+    <nav class="w-full h-20 bg-primary-dark-500 flex justify-between sticky -top-0.5" id="navbar">
+        <div class="w-full md:w-1/3 h-full flex">
+            <div class="flex pl-2 pr-4 hover:bg-primary-dark-300 transition">
+                <img src="../public/img/logo.svg" class="w-20 h-20" alt="Logo">
+                <h1 class="grid place-items-center ml-3 pb-1">
+                    <span class="font-bold text-4xl text-text-light">
+                        Název
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="w-full md:w-2/3 h-full flex justify-end">
+            <a class="px-4 grid place-items-center pb-1 bg-primary-dark-300 transition">
+                <span class="font-semibold text-2xl text-text-light">
+                    Domů
+                </span>
+            </a>
+            <a class="px-4 grid place-items-center pb-1 hover:bg-primary-dark-300 transition">
+                <span class="font-semibold text-2xl text-text-light">
+                    Novinky
+                </span>
+            </a>
+            <a class="px-4 grid place-items-center pb-1 hover:bg-primary-dark-300 transition">
+                <span class="font-semibold text-2xl text-text-light">
+                    Náš Tým
+                </span>
+            </a>
+            <a class="px-4 grid place-items-center pb-1 hover:bg-primary-dark-300 transition">
+                <span class="font-semibold text-2xl text-text-light">
+                    Kontakt
+                </span>
+            </a>
+        </div>
+    </nav>
+    <main class="" style="height: 2000px;">
+        <section class="w-96 h-48 m-auto mt-10 shadow-2xl text-center p-4 relative bg-white">
+            <h3 class="font-semibold text-xl">Citát týdne: </h3>
+            <p class="pt-3">„Většina lidí ve skutečnosti nechce svobodu, protože svoboda zahrnuje odpovědnost a většina lidí se bojí odpovědnosti.“</p>
+            <p class="absolute bottom-4 right-5">Autor: <span class="font-semibold">Autor</span></p>
+        </section>
+
+        <section class="w-11/12 m-auto flex flex-wrap justify-evenly mt-10">
+            <h3 class="inline w-full text-center m-10 text-4xl font-bold">Poslední články</h2>
+            <article class="w-96 m-3 shadow-xl hover:shadow-2xl transition">
+                <a href="#" class="block w-full h-full">
+                    <header class="w-full h-52 bg-primary-50 overflow-hidden">
+                        <img src="Main.png" alt="">
+                    </header>
+                    <main>
+                        <h4 class="font-semibold pt-2 px-2 pb-1 text-lg hover:underline transition">Název</h4>
+                        <p class="w-full px-2">
+                            <span class="block px-2 h-24 overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Consequuntur, numquam vel quo error nemo cum minima quas. 
+                                Obcaecati dolores dolor sunt minima dolorum aut distinctio, 
+                                illo commodi quo ipsam temporibus.</span>
+                            <span href="#" class="text-blue-500 hover:text-blue-700 hover:underline transition">Přečíst....</span>
+                        </p>
+                    </main>
+                    <footer class="flex justify-between p-2">
+                        <p>Autor: Jméno</p>
+                        <p>Včera</p>
+                    </footer>
+                </a>   
+            </article>
+            <article class="w-96 h-96 bg-secondary-dark-700 m-3">
+                <header>
+
+                </header>
+                <main>
+
+                </main>
+                <footer>
+
+                </footer>
+            </article>
+            <article class="w-96 h-96 bg-secondary-dark-700 m-3">
+                <header>
+
+                </header>
+                <main>
+
+                </main>
+                <footer>
+
+                </footer>
+            </article>
+            <article class="w-96 h-96 bg-secondary-dark-700 m-3">
+                <header>
+
+                </header>
+                <main>
+
+                </main>
+                <footer>
+
+                </footer>
+            </article>
+
+        </section>
+    </main>
+</body>
+</html>
