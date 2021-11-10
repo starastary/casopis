@@ -125,7 +125,8 @@ class PostController extends Controller
     public function show($slug)
     {
         $post = Post::where('slug', $slug)->first();
-
+        $post->authors;
+        $post->tags;
         return view('post.show')->with('post', $post);
     }
 
@@ -226,7 +227,7 @@ class PostController extends Controller
         ]);
 
         if (!DB::select('SELECT * FROM `users_posts` WHERE `user_id` = ? AND `post_id` = ?', [Auth::id(),$id])) {
-            $author = DB::insert("INSERT INTO `users_posts` (`user_id`, `post_id`) VALUES (?, ?);", [Auth::id(),$post->id]);
+            $author = DB::insert("INSERT INTO `users_posts` (`user_id`, `post_id`) VALUES (?, ?);", [Auth::id(),$id]);
         }
 
         $post = Post::find($id);

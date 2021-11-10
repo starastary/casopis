@@ -2,6 +2,7 @@
 @section('title', 'Hlavní stránka')
 
 @section('content')
+    <link rel="stylesheet" href="{{asset('css/text-normalize.css')}}">
     <nav class="w-full h-20 bg-primary-dark-500 flex flex-col md:flex-row justify-between sticky -top-0.5 relative z-50" id="navbar">
         <div class="w-full md:w-1/3 h-full flex justify-between md:justify-start">
             <div class="flex pl-2 pr-4 hover:bg-primary-dark-300 transition">
@@ -42,13 +43,31 @@
         </div>
     </nav>
 
-    <header class="w-full p-3">
-        <h3 class="font-bold text-3xl">
-            {{$post->name}}
-        </h3>
+    <header class="w-full relative" style="
+        height: 300px;
+        background-image: url('{{$post->img}}');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-attachment: fixed;
+        background-position: center center;
+        ">
+        <div class="w-full h-full flex flex-col items-start justify-center p-3" style="background: rgba(26,32,44,0.75)">
+            <h3 class="font-bold text-3xl text-white">
+                {{$post->name}}
+            </h3>
+            <p class="mt-5 ml-2 text-white text-lg">
+                {{$post->short}}
+            </p>
+        </div>
+
+        <div class="absolute bottom-5 left-5 flex">
+            @foreach($post->tags as $tag)
+                <p class="ml-1 px-1 py-0.5 bg-primary-800 text-white text-lg rounded hover:bg-primary-600 cursor-pointer transition">{{$tag->name}}</p>
+            @endforeach
+        </div>
     </header>
 
-    <main class="p-2" style="height: 2000px;">
+    <main class="p-3 text-holder m-auto max-w-7xl" style="height: 2000px;">
         {!! $post->textclear !!}
     </main>
     <script>
