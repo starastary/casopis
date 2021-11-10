@@ -2,7 +2,7 @@
 @section('title', 'Hlavní stránka')
 
 @section('content')
-    <header class="w-full h-screen bg-primary-dark-500 bg-img relative">
+    <header class="w-full h-screen bg-primary-dark-500 bg-img">
         <div class="w-full h-full bg-primary-dark-500 opacity-75">
 
         </div>
@@ -21,46 +21,9 @@
             <i class="fas fa-mouse"></i>
             <i class="fas fa-sort-down -mt-3 lg:-mt-5"></i>
         </a>
+
     </header>
-    <nav class="w-full h-20 bg-primary-dark-500 flex flex-col md:flex-row justify-between sticky -top-0.5 relative z-50" id="navbar">
-        <div class="w-full md:w-1/3 h-full flex justify-between md:justify-start">
-            <div class="flex pl-2 pr-4 hover:bg-primary-dark-300 transition">
-                <img src="../public/img/logo.svg" class="w-20 h-20" alt="Logo">
-                <h1 class="grid place-items-center ml-3 pb-1">
-                    <span class="font-bold text-4xl text-text-light">
-                        Temná komnata
-                    </span>
-                </h1>
-            </div>
-            <div class="self-center text-text-light md:hidden px-3 font-semibold text-2xl hamburger" id="hamburger" onclick="toggleMenu()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-        </div>
-        <div class="w-full md:w-2/3  md:h-full hidden md:flex flex-row items-start bg-primary-dark-400 md:bg-primary-dark-500 md:justify-end" id="menu">
-            <a class="px-4 grid place-items-center h-20 pb-1 bg-primary-dark-300 transition">
-                <span class="font-semibold text-2xl text-text-light">
-                    Domů
-                </span>
-            </a>
-            <a class="px-4 grid place-items-center h-20 pb-1 hover:bg-primary-dark-300 transition">
-                <span class="font-semibold text-2xl text-text-light">
-                    Novinky
-                </span>
-            </a>
-            <a class="px-4 grid place-items-center h-20 pb-1 hover:bg-primary-dark-300 transition">
-                <span class="font-semibold text-2xl text-text-light">
-                    Náš Tým
-                </span>
-            </a>
-            <a class="px-4 grid place-items-center h-20 pb-1 hover:bg-primary-dark-300 transition">
-                <span class="font-semibold text-2xl text-text-light">
-                    Kontakt
-                </span>
-            </a>
-        </div>
-    </nav>
+    @include('page.navbar')
     <main class="" style="height: 2000px;">
         <section class="w-96 h-48 m-auto mt-10 shadow-2xl text-center p-4 relative bg-white border-2 border-gray-400">
             <h3 class="font-semibold text-xl">Citát týdne: </h3>
@@ -98,11 +61,4 @@
 
         </section>
     </main>
-    <script>
-        function toggleMenu() {
-            document.getElementById('hamburger').classList.toggle("change");
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
 @endsection

@@ -16,6 +16,21 @@ class PageController extends Controller
             $post->tags;
         }
 
-        return view('page.home')->with('posts', $posts);
+        return view('page.home')->with('posts', $posts)->with('page', 'home');
+    }
+
+    public function news()
+    {
+        return view('page.news')->with('page', 'news');
+    }
+
+    public function team()
+    {
+        return view('page.team')->with('page', 'team');
+    }
+
+    public function contact()
+    {
+        return view('page.contact')->with('page', 'contact');
     }
 }

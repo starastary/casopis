@@ -15,6 +15,22 @@ class DashboardController extends Controller
             $post->tags;
         }
 
-        return view('dashboard.home')->with('posts', $posts);
+        return view('dashboard.home')->with('posts', $posts)->with('page', 'home');
     }
+
+    public function magazine()
+    {
+        return view('dashboard.magazine')->with('page', 'magazine');
+    }
+
+    public function users()
+    {
+        return view('dashboard.users')->with('page', 'users');
+    }
+
+    public function settings()
+    {
+        return view('dashboard.settings')->with('page', 'settings');
+    }
+
 }

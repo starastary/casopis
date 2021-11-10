@@ -20,9 +20,15 @@ use Illuminate\Support\Facades\Route;
 
 //Pages
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('news', [PageController::class, 'news'])->name('news');
+Route::get('team', [PageController::class, 'team'])->name('team');
+Route::get('contact', [PageController::class, 'contact'])->name('contact');
 
 //Dashboard
 Route::get('dashboard', [DashboardController::class, 'home'])->middleware(['auth'])->name('dashboard');
+Route::get('dashboard/magazine', [DashboardController::class, 'magazine'])->middleware(['auth'])->name('dashboard.magazine');
+Route::get('dashboard/users', [DashboardController::class, 'users'])->middleware(['auth'])->name('dashboard.users');
+Route::get('dashboard/settings', [DashboardController::class, 'settings'])->middleware(['auth'])->name('dashboard.settings');
 
 //Post
 Route::get('post', [PostController::class, 'index'])->name('post.index');
