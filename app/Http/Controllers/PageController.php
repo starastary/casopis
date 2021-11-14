@@ -24,9 +24,9 @@ class PageController extends Controller
         return view('page.news')->with('page', 'news');
     }
 
-    public function team()
+    public function magazine()
     {
-        return view('page.team')->with('page', 'team');
+        return view('page.magazine')->with('page', 'magazine');
     }
 
     public function contact()

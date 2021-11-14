@@ -27,8 +27,26 @@
         </div>
     </header>
 
-    <main class="p-3 text-holder m-auto max-w-7xl" style="height: 2000px;">
-        {!! $post->textclear !!}
+    <main class="lg:flex justify-evenly lg:items-start m-auto max-w-7xl" style="height: 2000px;">
+        <div class="p-3 w-11/12 m-auto my-4 lg:w-8/12 text-holder">
+            {!! $post->textclear !!}
+        </div>
+        <aside class="p-3 w-max h-max m-auto my-4 lg:w-4/12 text-left lg:border-gray-400 border-2">
+            @if (count($post->authors) > 1)
+                <p class="font-bold">Autoři:</p>
+            @else
+                <p class="font-bold">Autor:</p>
+            @endif
+            @foreach($post->authors as $author)
+                <p class="pl-2">{{$author->name}}</p>
+            @endforeach
+            <p class="font-bold">Editor:</p>
+            <p  class="pl-2">{{$post->editorname}}</p>
+            <p class="font-bold">Šéf redaktor:</p>
+            <p  class="pl-2">{{$post->chiefname}}</p>
+            <p class="font-bold">Vydáno:</p>
+            <p  class="pl-2">{{$post->published_at}}</p>
+        </aside>
     </main>
 
 @endsection

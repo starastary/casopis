@@ -22,7 +22,7 @@ class Post extends Model
     public function getTextclearAttribute()
     {
         $text = $this->text;
-        $text = strip_tags($text, "<a><p><h1><h2><h3><h4><h5><h6><i><b><em><strong><s><small><code><div><section><header><main><footer><span>");
+        $text = strip_tags($text, "<a><p><h1><h2><h3><h4><h5><h6><i><b><em><strong><s><small><code><div><section><header><main><footer><span><img><ul><ol><li>");
         return $text;
     }
 

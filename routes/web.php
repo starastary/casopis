@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 //Pages
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('news', [PageController::class, 'news'])->name('news');
-Route::get('team', [PageController::class, 'team'])->name('team');
+Route::get('magazine', [PageController::class, 'magazine'])->name('magazine');
 Route::get('contact', [PageController::class, 'contact'])->name('contact');
 
 //Dashboard

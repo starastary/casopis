@@ -41,16 +41,16 @@
                 </span>
             </a>
         @endif
-        @if ($page == "team")
+        @if ($page == "magazine")
             <a class="px-4 grid place-items-center h-20 pb-1 bg-primary-dark-300 transition">
                 <span class="font-semibold text-2xl text-text-light">
-                    Náš tým
+                    Časopis
                 </span>
             </a>
         @else
-            <a class="px-4 grid place-items-center h-20 pb-1 hover:bg-primary-dark-300 transition" href="team">
+            <a class="px-4 grid place-items-center h-20 pb-1 hover:bg-primary-dark-300 transition" href="magazine">
                 <span class="font-semibold text-2xl text-text-light">
-                    Náš tým
+                    Časopis
                 </span>
             </a>
         @endif

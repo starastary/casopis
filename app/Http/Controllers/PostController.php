@@ -253,6 +253,11 @@ class PostController extends Controller
 
         $post = Post::find($id);
 
+        $post->editor = User::where('role', 'editor')->first()->id;
+        $post->chief = User::where('role', 'chief')->first()->id;
+
+        $post->save();
+
         if ($post->published_at) {
             $post->published_at = null;
         } else {
