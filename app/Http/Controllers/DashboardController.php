@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -25,7 +26,8 @@ class DashboardController extends Controller
 
     public function users()
     {
-        return view('dashboard.users')->with('page', 'users');
+        $users = User::all();
+        return view('dashboard.users')->with('page', 'users')->with('users', $users);
     }
 
     public function settings()
