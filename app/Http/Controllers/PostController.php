@@ -139,7 +139,7 @@ class PostController extends Controller
     public function edit($id)
     {
         if (Auth::user()->permission < 1) {
-            return '403';
+            abort(403, "Nedostatečná práva");
         }
 
         if (Auth::user()->permission < 1) {
@@ -167,7 +167,7 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         if (Auth::user()->permission < 1) {
-            return '403';
+            abort(403, "Nedostatečná práva");
         }
 
         $this->validate($request,[
@@ -248,7 +248,7 @@ class PostController extends Controller
     public function publish($id)
     {
         if (Auth::user()->permission < 1) {
-            return '403';
+            abort(403, "Nedostatečná práva");
         }
 
         $post = Post::find($id);

@@ -23,13 +23,13 @@
                     <tr>
                         <td class="border-black border px-2 py-1 text-center">{{$user->id}}</td>
                         <td class="border-black border px-2 py-1 text-center">{{$user->name}}</td>
-                        <td class="border-black border px-2 py-1 text-center">{{$user->nick}}</td>
+                        <td class="border-black border px-2 py-1 text-center">{{$user->nickname}}</td>
                         <td class="border-black border px-2 py-1 text-center max-w-4xl truncate">{{$user->avatar}}</td>
                         <td class="border-black border px-2 py-1 text-center max-w-4xl truncate">{{$user->motto}}</td>
                         <td class="border-black border px-2 py-1 text-center">{{$user->role}}</td>
                         <td class="border-black border px-2 py-1 text-center">{{$user->permission}}</td>
                         <td class="border-black border px-2 py-1 text-center"></td>
-                        <td class="border-black border px-2 py-1 text-center"><a href="user/edit/{{$user->id}}" class="text-blue-500 hover:text-blue-700 hover:underline transition">Upravit</a></td>
+                        <td class="border-black border px-2 py-1 text-center"><a href="users/edit/{{$user->id}}" class="text-blue-500 hover:text-blue-700 hover:underline transition">Upravit</a></td>
                         <td class="border-black border px-2 py-1 text-center">{{$user->created_at}}</td>
                         <td class="border-black border px-2 py-1 text-center">{{$user->updated_at}}</td>
                     </tr>

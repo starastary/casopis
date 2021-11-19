@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,10 @@ Route::get('dashboard', [DashboardController::class, 'home'])->middleware(['auth
 Route::get('dashboard/magazine', [DashboardController::class, 'magazine'])->middleware(['auth'])->name('dashboard.magazine');
 Route::get('dashboard/users', [DashboardController::class, 'users'])->middleware(['auth'])->name('dashboard.users');
 Route::get('dashboard/settings', [DashboardController::class, 'settings'])->middleware(['auth'])->name('dashboard.settings');
+
+//Dashboard users
+Route::get('dashboard/users/edit/{id}', [UserController::class, 'edit'])->middleware(['auth'])->name('dashboard.users.edit');
+Route::put('dashboard/users/edit/{id}', [UserController::class, 'update'])->middleware(['auth'])->name('dashboard.users.update');
 
 //Post
 Route::get('post', [PostController::class, 'index'])->name('post.index');
