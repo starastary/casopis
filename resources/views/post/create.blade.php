@@ -47,9 +47,9 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-start mx-6 w-full  mt-2">
-                    <label for="stags" class="text-2xl mb-2">Tagy:</label>
+                    <label for="stags" class="text-2xl mb-2">Tagy: <button onclick="newTag()">Nový tag</button></label>
                     <select name="tags[]" id="tags"  class="rounded-lg px-5 py-3 text-lg border border-primary-700" multiple>
-                        <option disabled>Nový</option>
+                        <option disabled>Vyberte</option>
                         @foreach($tags as $tag)
                             <option value="{{$tag->id}}">{{$tag->name}}</option>
                         @endforeach
@@ -162,8 +162,7 @@
                 var el = e.target;
                 if (el.tagName.toLowerCase() == 'option' && el.parentNode.hasAttribute('multiple')) {
                     e.preventDefault();
-                    if (el.innerHTML == "Nový") {
-                        newTag()
+                    if (el.innerHTML == "Vyberte") {
                         el.setAttribute('selected', '');
                         return;
                     }

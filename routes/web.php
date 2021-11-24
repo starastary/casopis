@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\MagazineController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
@@ -46,6 +47,15 @@ Route::get('post/publish/{id}', [PostController::class, 'publish'])->name('post.
 
 Route::get('post/tag/{name}', [PostController::class, 'tag'])->name('post.tag');
 Route::post('post/img', [PostController::class, 'upload'])->name('post.img');
+
+//Magazine
+//Route::get('magazine', [MagazineController::class, 'index'])->name('magazine.index');
+Route::get('magazine/new', [MagazineController::class, 'create'])->name('magazine.create');
+Route::post('magazine', [MagazineController::class, 'store'])->name('magazine.store');
+Route::get('magazine/edit/{id}', [MagazineController::class, 'edit'])->name('magazine.edit');
+Route::put('magazine/{id}', [MagazineController::class, 'update'])->name('magazine.update');
+Route::get('magazine/delete/{id}', [MagazineController::class, 'delete'])->name('magazine.delete');
+
 
 //Auth
 require __DIR__.'/auth.php';

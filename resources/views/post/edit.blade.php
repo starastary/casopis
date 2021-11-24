@@ -34,6 +34,9 @@
                     <div class="flex flex-col lg:flex-row w-full items-center justify-between lg:mt-8 m-2">
                         <div class="flex flex-col justify-start mx-6 w-full  mt-2">
                             <label for="img" class="text-2xl mb-2">Náhledový obrázek:</label>
+                            @if ($post->img)
+                                <img src="{{$post->img}}" alt="Náhledový obrázek" class="p-5 max-w-sm">
+                            @endif
                             <input type="file" id="img" name="img" value="{{old('img') ?:$post->img}}"
                                    accept=".png,.jpg">
                         </div>
@@ -48,9 +51,9 @@
                         </div>
                     </div>
                     <div class="flex flex-col justify-start mx-6 w-full  mt-2">
-                        <label for="stags" class="text-2xl mb-2">Tagy:</label>
+                        <label for="stags" class="text-2xl mb-2">Tagy: <button onclick="newTag()">Nový tag</button></label>
                         <select name="tags[]" id="tags"  class="rounded-lg px-5 py-3 text-lg border border-primary-700" multiple>
-                            <option>Nový</option>
+                            <option disabled>Vyberte</option>
                             @foreach($tags as $tag)
                                 @if (in_array($tag->id, $used_tags))
                                     <option value="{{$tag->id}}" selected>{{$tag->name}}</option>

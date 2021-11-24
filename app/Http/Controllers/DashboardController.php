@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Magazine;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -21,7 +22,8 @@ class DashboardController extends Controller
 
     public function magazine()
     {
-        return view('dashboard.magazine')->with('page', 'magazine');
+        $magazines = Magazine::all();
+        return view('dashboard.magazine')->with('page', 'magazine')->with('magazines', $magazines);
     }
 
     public function users()
