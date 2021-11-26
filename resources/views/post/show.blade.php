@@ -5,7 +5,7 @@
 
     <header class="w-full relative" style="
         height: 220px;
-        background-image: url('{{$post->img}}');
+        background-image: url('{{asset($post->img) ?: asset('img/post-placeholder.jpg')}}');
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-attachment: fixed;

@@ -59,7 +59,7 @@
         <button type="submit" class="block m-auto uppercase font-bold text-2xl text-white mt-10 py-4 px-16 bg-green-500 rounded-lg shadow-lg hover:shadow-2xl hover:bg-green-600 transition">
             Vytvořit
         </button>
-            <a href="{{route('dashboard/magazine')}}" class="mt-5 underline text-gray-500 hover:text-gray-700 m-auto block w-max">Zpět</a>
+            <a href="{{route('dashboard.magazine')}}" class="mt-5 underline text-gray-500 hover:text-gray-700 m-auto block w-max">Zpět</a>
         </form>
 
     </div>
