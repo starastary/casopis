@@ -44,7 +44,7 @@
         </section>
 
 
-        <section class="w-11/12 m-auto flex flex-wrap justify-evenly mt-20">
+        <section class="w-11/12 m-auto mt-20">
             <div class="m-auto flex flex-wrap justify-evenly">
                 <h3 class="inline w-full text-center m-10 text-4xl font-bold">Naše časopisy</h3>
                     @foreach($magazines as $magazine)
