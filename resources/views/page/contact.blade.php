@@ -15,7 +15,7 @@
                 <article class="w-96 m-3">
                     <div class="block w-full h-full filter drop-shadow-xl hover:drop-shadow-2xl">
                         <header class="w-full overflow-hidden relative z-20">
-                            <img src="{{$redaktor->img ?: '/img/profile-placeholder.jpg'}}" alt="Profilový obrázek" class="rounded-full w-36 m-auto border-2 border-gray-400">
+                            <img src="{{$redaktor->avatar?: '/img/profile-placeholder.jpg'}}" alt="Profilový obrázek" class="rounded-full w-36 m-auto border-none border-gray-400">
                         </header>
                         <main class="bg-white px-2 pb-2 pt-6 -mt-9 rounded-md border-2 border-gray-400">
                             @if ($redaktor->nickname)

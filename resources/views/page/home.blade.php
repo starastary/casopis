@@ -27,7 +27,7 @@
     </header>
     @include('page.navbar')
     <main class="" style="height: 2000px;">
-        <section class="w-96 h-48 m-auto mt-10 shadow-2xl text-center p-4 relative bg-white border-2 border-gray-400">
+        <section class="w-96 h-48 m-auto mt-10 shadow-2xl text-center p-4 relative bg-white border-2 border-gray-400 rounded-md">
             <h3 class="font-semibold text-xl">Citát týdne: </h3>
             <p class="pt-3">„Ať už si myslíte, že něco dokážete, nebo si myslíte, že to nedokážete, v obou případech máte pravdu.“
             <p class="absolute bottom-4 right-5">Autor: <span class="font-semibold">Henry Ford</span></p>
