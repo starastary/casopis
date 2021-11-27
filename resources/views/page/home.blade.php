@@ -9,7 +9,7 @@
         <div class="absolute top-0 left-0 w-full h-screen z-20 flex flex-col lg:flex-row justify-evenly items-center">
                 <article class="w-10/12 md:w-7/12 lg:w-5/12 xl:w-1/3 2xl:w-1/4 text-center lg:text-left">
                     <h2 class="text-text-light font-bold text-6xl md:text-7xl lg:text-9xl">Tajemná komnata</h2>
-                    <p class="text-text-light font-semibold  text-sm md:text-base lg:text-2xl mt-6">„Většina lidí ve skutečnosti nechce svobodu, protože svoboda zahrnuje odpovědnost a většina lidí se bojí odpovědnosti.“ Zdroj: https://citaty.net/</p>
+                    <!--<p class="text-text-light font-semibold  text-sm md:text-base lg:text-2xl mt-6">„Většina lidí ve skutečnosti nechce svobodu, protože svoboda zahrnuje odpovědnost a většina lidí se bojí odpovědnosti.“ Zdroj: https://citaty.net/</p>-->
                 </article>
                 <article class="w-5/12 xl:w-1/3 2xl:w-1/4 text-center">
                     @if ($magazine)

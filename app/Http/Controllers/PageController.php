@@ -13,14 +13,14 @@ class PageController extends Controller
     {
         $posts = Post::orderBy('updated_at', 'desc')->where('published_at', '!=', null)->paginate(3);
 
-        $magazines = Magazine::orderBy('updated_at', 'desc')->paginate(3);
+        $magazines = Magazine::orderBy('created_at', 'desc')->paginate(3);
 
         foreach ($posts as $post) {
             $post->authors;
             $post->tags;
         }
 
-        $magazine = Magazine::orderBy('updated_at', 'desc')->first();
+        $magazine = Magazine::orderBy('created_at', 'desc')->first();
 
         return view('page.home')
             ->with('posts', $posts)
@@ -32,7 +32,7 @@ class PageController extends Controller
     public function news()
     {
 
-        $posts = Post::orderBy('updated_at', 'desc')->where('published_at', '!=', null)->paginate(12);
+        $posts = Post::orderBy('updated_at', 'desc')->where('published_at', '!=', null)->paginate(20);
 
         foreach ($posts as $post) {
             $post->authors;
@@ -45,7 +45,7 @@ class PageController extends Controller
 
     public function magazine()
     {
-        $magazines = Magazine::orderBy('updated_at', 'desc')->paginate(12);
+        $magazines = Magazine::orderBy('created_at', 'DESC')->paginate(20);
         return view('page.magazine')->with('page', 'magazine')->with('magazines', $magazines);
     }
 
